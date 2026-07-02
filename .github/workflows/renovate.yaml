@@ -1,6 +1,6 @@
 name: Renovate
 on:
-  schedulet:
+  schedule:
     - cron: '0 */3 * * *'
   workflow_dispatch:
 
