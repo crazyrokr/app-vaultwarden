@@ -14,7 +14,7 @@ jobs:
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v41.0.14
         with:
-          configurationFile: renovate.json
+          configurationFile: .github/renovate.json
           token: ${{ secrets.RENOVATE_TOKEN }}
         env:
           RENOVATE_FORK_PROCESSING: "true"
