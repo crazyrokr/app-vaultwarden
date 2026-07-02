@@ -1,7 +1,10 @@
+---
 name: Renovate
+
+# yamllint disable-line rule:truthy
 on:
-  schedulet:
-    - cron: '0 */3 * * *'
+  schedule:
+    - cron: "0 */3 * * *"
   workflow_dispatch:
 
 jobs:
@@ -12,9 +15,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Self-hosted Renovate
-        uses: renovatebot/github-action@v41.0.14
+        uses: renovatebot/github-action@v46.1.17
         with:
-          configurationFile: renovate.json
+          configurationFile: .github/renovate.json
           token: ${{ secrets.RENOVATE_TOKEN }}
         env:
-          RENOVATE_FORK_PROCESSING: "true"
+          RENOVATE_FORK_PROCESSING: "enabled"
+          RENOVATE_AUTODISCOVER: "true"
+          RENOVATE_PIN_DIGESTS: "true"
