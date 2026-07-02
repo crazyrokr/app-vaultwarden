@@ -18,3 +18,4 @@ jobs:
           token: ${{ secrets.RENOVATE_TOKEN }}
         env:
           RENOVATE_FORK_PROCESSING: "true"
+          RENOVATE_AUTODISCOVER: "true"
