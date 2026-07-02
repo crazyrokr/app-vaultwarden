@@ -17,5 +17,5 @@ jobs:
           configurationFile: .github/renovate.json
           token: ${{ secrets.RENOVATE_TOKEN }}
         env:
-          RENOVATE_FORK_PROCESSING: "true"
+          RENOVATE_FORK_PROCESSING: "enabled"
           RENOVATE_AUTODISCOVER: "true"
